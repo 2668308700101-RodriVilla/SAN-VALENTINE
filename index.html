@@ -1,41 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crea tu Valentine 💕</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <title>San Valentine 💘</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
 
-<div class="container">
+    <!-- FORMULARIO -->
+    <div id="form-section">
+        <h1>Crea tu carta 💌</h1>
 
-  <h1>💌 Crea tu Valentine</h1>
+        <input type="text" id="fromInput" placeholder="Tu nombre">
+        <input type="text" id="toInput" placeholder="Nombre de tu Valentine">
+        <textarea id="messageInput" placeholder="Escribe tu mensaje"></textarea>
 
-  <label>De (tu nombre):</label>
-  <input type="text" id="fromName" />
+        <button onclick="generateLink()">Generar Carta 💖</button>
 
-  <label>Para (nombre de tu valentine):</label>
-  <input type="text" id="toName" />
+        <div id="generatedLink"></div>
+    </div>
 
-  <label>Mensaje 💌:</label>
-  <textarea id="message" rows="4"></textarea>
+    <!-- SOBRE / CARTA -->
+    <div id="envelope" style="display:none;">
+        <div id="letter-content"></div>
+    </div>
 
-  <button id="createBtn">Crear Valentine 💕</button>
-
-  <div id="result"></div>
-
-</div>
-
-  </div>
-
-  <script src="script.js"></script>
-
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
