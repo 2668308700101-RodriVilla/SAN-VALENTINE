@@ -7,24 +7,35 @@
 </head>
 <body>
 
-    <!-- FORMULARIO -->
-    <div id="form-section">
-        <h1>Crea tu carta 💌</h1>
+<!-- Música -->
+<audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
 
-        <input type="text" id="fromInput" placeholder="Tu nombre">
-        <input type="text" id="toInput" placeholder="Nombre de tu Valentine">
-        <textarea id="messageInput" placeholder="Escribe tu mensaje"></textarea>
+<!-- Corazones flotando -->
+<div class="hearts"></div>
 
-        <button onclick="generateLink()">Generar Carta 💖</button>
+<!-- FORMULARIO -->
+<div id="form-section">
+    <h1>Crea tu carta 💌</h1>
 
-        <div id="generatedLink"></div>
+    <input type="text" id="fromInput" placeholder="Tu nombre">
+    <input type="text" id="toInput" placeholder="Nombre de tu Valentine">
+    <textarea id="messageInput" placeholder="Escribe tu mensaje"></textarea>
+
+    <button onclick="generateLink()">Generar Carta 💖</button>
+
+    <div id="generatedLink"></div>
+</div>
+
+<!-- SOBRE -->
+<div id="envelopeContainer" style="display:none;">
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="letter" id="letter-content"></div>
     </div>
+</div>
 
-    <!-- SOBRE / CARTA -->
-    <div id="envelope" style="display:none;">
-        <div id="letter-content"></div>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
