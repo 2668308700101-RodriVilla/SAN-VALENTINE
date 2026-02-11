@@ -48,13 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.sayYes = function () {
-        document.body.innerHTML =
-            "<div class='final-screen'>" +
-            "<h1>💞 Sabía que dirías que sí 💞</h1>" +
-            "<p>Eres el amor más bonito que me regaló la vida.</p>" +
-            "<div class='big-heart'>❤️</div>" +
-            "</div>";
-    };
+
+    document.body.innerHTML =
+        "<div class='final-screen'>" +
+        "<h1>💞 Sabía que dirías que sí 💞</h1>" +
+        "<p>Eres el amor más bonito que me regaló la vida.</p>" +
+
+        "<div class='date-box'>" +
+        "<h2>📅 14 de Febrero 2026</h2>" +
+        "<p>Prepárate… porque ese día tendremos una cita muy especial ❤️</p>" +
+        "</div>" +
+
+        "<div class='big-heart'>❤️</div>" +
+        "</div>";
+};
 
     window.moveButton = function () {
         const button = document.getElementById("noBtn");
@@ -81,5 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
 };
 
 });
+
 
 
