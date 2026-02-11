@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.innerHTML =
         "<div class='final-screen'>" +
-        "<h1>💞 Sabía que dirías que sí 💞</h1>" +
+        "<h1>❤️‍🔥 Sabía que dirías que sí mi amor ❤️‍🔥</h1>" +
         "<p>Eres el amor más bonito que me regaló la vida.</p>" +
 
         "<div id='dateReveal' class='date-box hidden'>" +
         "<h2>📅 14 de Febrero 2026</h2>" +
-        "<p>Prepárate… porque ese día tendremos una cita muy especial ❤️</p>" +
+        "<p>Prepárate mi sexy… porque ese día tendremos una cita muy especial 😘❤️</p>" +
         "</div>" +
 
         "<div class='big-heart'>❤️</div>" +
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dateBox.classList.remove("hidden");
             dateBox.classList.add("show");
         }
-    }, 3000);
+    }, 2000);
 };
 
     window.moveButton = function () {
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 };
 
 });
+
 
 
 
