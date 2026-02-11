@@ -10,11 +10,14 @@ function generateLink() {
     }
 
     const baseURL = window.location.origin + window.location.pathname;
-    const link = ${baseURL}?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&message=${encodeURIComponent(message)};
+    const link = baseURL + 
+        "?from=" + encodeURIComponent(from) +
+        "&to=" + encodeURIComponent(to) +
+        "&message=" + encodeURIComponent(message);
 
     document.getElementById("generatedLink").innerHTML =
-        `<p>Copia y envía este link:</p>
-         <input type="text" value="${link}" readonly style="width:80%">`;
+        "<p>Copia y envía este link:</p>" +
+         "<input type='text' value=" + link + "' readonly style="width:80%'>";
 }
 
 // Leer parámetros de la URL
@@ -61,3 +64,4 @@ function moveButton() {
     button.style.left = x + "px";
     button.style.top = y + "px";
 }
+
