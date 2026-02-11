@@ -1,15 +1,33 @@
-// Obtener parámetros de la URL
+// Generar link personalizado
+function generateLink() {
+    const from = document.getElementById("fromInput").value;
+    const to = document.getElementById("toInput").value;
+    const message = document.getElementById("messageInput").value;
+
+    if (!from || !to || !message) {
+        alert("Por favor llena todos los campos 💘");
+        return;
+    }
+
+    const baseURL = window.location.origin + window.location.pathname;
+    const link = ${baseURL}?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&message=${encodeURIComponent(message)};
+
+    document.getElementById("generatedLink").innerHTML =
+        `<p>Copia y envía este link:</p>
+         <input type="text" value="${link}" readonly style="width:80%">`;
+}
+
+// Leer parámetros de la URL
 const params = new URLSearchParams(window.location.search);
 const from = params.get("from");
 const to = params.get("to");
 const message = params.get("message");
 
-// Elementos
 const formSection = document.getElementById("form-section");
 const envelope = document.getElementById("envelope");
 const letterContent = document.getElementById("letter-content");
 
-// Si hay datos en la URL, mostrar solo la carta
+// Si hay parámetros → mostrar solo carta
 if (from && to && message) {
     formSection.style.display = "none";
     envelope.style.display = "block";
@@ -25,7 +43,6 @@ if (from && to && message) {
     `;
 }
 
-// Función cuando dice SÍ
 function sayYes() {
     document.body.innerHTML = `
         <div class="yes-screen">
@@ -35,13 +52,12 @@ function sayYes() {
     `;
 }
 
-// Botón NO se mueve
 function moveButton() {
     const button = document.getElementById("noBtn");
-    const x = Math.random() * window.innerWidth - 100;
-    const y = Math.random() * window.innerHeight - 50;
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
 
     button.style.position = "absolute";
-    button.style.left = ${x}px;
-    button.style.top = ${y}px;
+    button.style.left = x + "px";
+    button.style.top = y + "px";
 }
