@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         letterContent.innerHTML =
             "<h2>Para " + to + " 💘</h2>" +
             "<p>" + message + "</p>" +
-            "<p class='signature'>Con amor, " + from + "</p>" +
+            "<p class='signature'>Con amor tu hombre " + from + "</p>" +
             "<div class='buttons'>" +
             "<button onclick='sayYes()'>Sí 💖</button>" +
             "<button id='noBtn' onmouseover='moveButton()'>No 😅</button>" +
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dateBox.classList.remove("hidden");
             dateBox.classList.add("show");
         }
-    }, 2000);
+    }, 3000);
 };
 
     window.moveButton = function () {
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 };
 
 });
+
 
 
 
