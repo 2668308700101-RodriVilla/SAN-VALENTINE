@@ -54,13 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
         "<h1>💞 Sabía que dirías que sí 💞</h1>" +
         "<p>Eres el amor más bonito que me regaló la vida.</p>" +
 
-        "<div class='date-box'>" +
+        "<div id='dateReveal' class='date-box hidden'>" +
         "<h2>📅 14 de Febrero 2026</h2>" +
         "<p>Prepárate… porque ese día tendremos una cita muy especial ❤️</p>" +
         "</div>" +
 
         "<div class='big-heart'>❤️</div>" +
         "</div>";
+
+    // Revelar después de 2 segundos
+    setTimeout(function () {
+        const dateBox = document.getElementById("dateReveal");
+        if (dateBox) {
+            dateBox.classList.remove("hidden");
+            dateBox.classList.add("show");
+        }
+    }, 2000);
 };
 
     window.moveButton = function () {
@@ -88,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 };
 
 });
+
 
 
 
