@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         letterContent.innerHTML =
             "<h2>Para " + to + " 💘</h2>" +
             "<p>" + message + "</p>" +
-            "<p class='signature'>Con amor tu hombre " + from + "</p>" +
+            "<p class='signature'>Con amor " + from + "</p>" +
             "<div class='buttons'>" +
             "<button onclick='sayYes()'>Sí 💖</button>" +
             "<button id='noBtn' onmouseover='moveButton()'>No 😅</button>" +
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 };
 
 });
+
 
 
 
