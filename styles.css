@@ -113,4 +113,49 @@ button {
 
 .envelope.open .letter {
   display: block;
+
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    color: white;
+    text-align: center;
+}
+
+#envelope {
+    margin-top: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:first-child {
+    background-color: #ff4d88;
+    color: white;
+}
+
+button:last-child {
+    background-color: #555;
+    color: white;
+}
+
+.yes-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
