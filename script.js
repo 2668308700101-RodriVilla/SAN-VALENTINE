@@ -67,5 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
         button.style.left = x + "px";
         button.style.top = y + "px";
     };
+    window.openEnvelope = function () {
+        const envelope = document.querySelector(".envelope");
+        if (envelope) {
+            envelope.classList.add("open");
+        }
+    };
 
 });
+
