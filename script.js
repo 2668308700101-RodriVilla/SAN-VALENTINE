@@ -68,11 +68,18 @@ document.addEventListener("DOMContentLoaded", function () {
         button.style.top = y + "px";
     };
     window.openEnvelope = function () {
-        const envelope = document.querySelector(".envelope");
-        if (envelope) {
-            envelope.classList.add("open");
-        }
-    };
+    const envelope = document.querySelector(".envelope");
+    const music = document.getElementById("bgMusic");
+
+    if (envelope) {
+        envelope.classList.add("open");
+    }
+
+    if (music) {
+        music.play().catch(() => {});
+    }
+};
 
 });
+
 
