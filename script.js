@@ -17,9 +17,8 @@ function generateLink() {
 
     document.getElementById("generatedLink").innerHTML =
         "<p>Copia y envía este link:</p>" +
-         "<input type='text' value=" + link + "' readonly style="width:80%'>";
+        "<input type='text' value='" + link + "' readonly style='width:80%'>";
 }
-
 // Leer parámetros de la URL
 const params = new URLSearchParams(window.location.search);
 const from = params.get("from");
@@ -64,4 +63,5 @@ function moveButton() {
     button.style.left = x + "px";
     button.style.top = y + "px";
 }
+
 
